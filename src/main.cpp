@@ -33,8 +33,8 @@ int main() {
     motor1_dir = 1;
     motor2_dir = 1;
 
-    motor1_voltage = 0.5;
-    motor2_voltage = 0.5;
+    motor1_voltage = 0.25;
+    motor2_voltage = 0.25;
 
     // Instantiating state variables for buttons 
     int up_button_state;
