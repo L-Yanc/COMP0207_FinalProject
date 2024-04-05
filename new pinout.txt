@@ -1,0 +1,4 @@
+new pinout
+
+PE_10 --> LED1
+PE_12 --> LED2
