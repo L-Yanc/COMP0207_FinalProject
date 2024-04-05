@@ -27,6 +27,9 @@ int main() {
     motor1_PWM.period_us(50);
     motor2_PWM.period_us(50);
 
+    led_up.period_us(50);
+    led_down.period_us(50);
+
     motor1_dir = 1;
     motor2_dir = 1;
 
