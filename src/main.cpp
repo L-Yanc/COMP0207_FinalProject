@@ -16,8 +16,8 @@ DigitalIn up_button(D1);
 DigitalIn down_button(D0);
 DigitalIn reverse_button(D3);
 
-PwmOut led_up(PE_14);
-PwmOut led_down(PE_12);
+PwmOut led_up(PE_12);
+PwmOut led_down(PE_14);
 
 int main() {
 
@@ -57,6 +57,7 @@ int main() {
             motor2_dir = 0;
 
             brightness_change = -0.01;
+            printf("Button reversed \n");
 
         } else {
 
@@ -102,8 +103,6 @@ int main() {
 
             motor1_PWM.write(0.0);
             motor2_PWM.write(0.0);
-
-            printf("Nothing is pressed.\n");
 
         }
 
