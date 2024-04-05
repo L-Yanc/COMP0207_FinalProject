@@ -14,8 +14,8 @@ float motor1_voltage = 0.0;
 float motor2_voltage = 0.0;
 
 // Button initializations
-DigitalIn up_button(D1); 
-DigitalIn down_button(D0);
+DigitalIn up_button(D0); 
+DigitalIn down_button(D1);
 DigitalIn reverse_button(D3);
 
 // LED initializations
@@ -68,6 +68,7 @@ int main() {
             motor2_dir = 0;
 
             brightness_change = -0.01;
+
             printf("Button reversed \n");
 
         } else {
@@ -90,7 +91,7 @@ int main() {
                 led_up_bright = led_up_bright + brightness_change;
             }
 
-            printf("     Button pressed 1\n");
+            printf("Up Button pressed\n");
 
         // Activating motor 2 if the down button is pressed
         } else if (up_button_state == 0 && down_button_state == 1) {
@@ -104,7 +105,7 @@ int main() {
                 led_down_bright = led_down_bright + brightness_change;
             }
 
-            printf("        Button pressed 2\n");
+            printf("Down Button pressed\n");
 
         // Activating both motors when both are pressed for compression
         } else if (up_button_state == 1 && down_button_state == 1) {
@@ -125,10 +126,8 @@ int main() {
 
         // Setting both motors to zero when nothing is pressed
         } else {
-
             motor1_PWM.write(0.0);
             motor2_PWM.write(0.0);
-
         }
 
         // Outputting the allocated brightnesses for the LEDs

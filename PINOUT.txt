@@ -8,8 +8,8 @@ Motor 1 Direction --> D6
 Motor 2 Direction --> D7
 
 **Button Inputs**
-Up Button --> D1
-Down Button --> D0
+Up Button --> D0
+Down Button --> D1
 Reverse Button --> D3
 
 **LED Outputs**
